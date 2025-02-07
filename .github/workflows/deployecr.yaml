@@ -52,7 +52,7 @@ jobs:
     - name: Download build artifact
       uses: actions/download-artifact@v4
       with:
-        name: latihan
+        name: showip
     
     - name: Deploy to Elastic Beanstalk
       env:
