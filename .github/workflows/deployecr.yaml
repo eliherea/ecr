@@ -22,7 +22,7 @@ jobs:
       run: npm install
 
     - name: Build zip
-      run: zip -r showip.zip . -x 
+      run: zip -r showip.zip .
 
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
