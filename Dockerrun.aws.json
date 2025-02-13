@@ -1,0 +1,30 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "volumes": [
+        {
+            "name": "showip-data"
+        }
+    ],
+    "containerDefinitions": [
+        {
+            "name": "demo-app",
+            "image": "304397978118.dkr.ecr.us-east-1.amazonaws.com/ayam:try-latest",
+            "essential": true,
+            "cpu": 1024,
+            "memory": 2048,
+            "mountPoints": [
+                {
+                    "sourceVolume": "showip-data",
+                    "containerPath": "/var/app/current/nodejs"
+                }
+            ],
+            "portMappings": [
+                {
+                    "appProtocol": "http",
+                    "containerPort": 5000,
+                    "hostPort": 5000
+                }
+            ]
+        }
+    ]
+  }
